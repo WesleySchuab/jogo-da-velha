@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .side-panel {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #player1-wins,
+        #player2-wins {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<title>Jogo da Velha</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="side-panel">
+            <label for="player1">Jogador 1:</label>
+            <input type="text" id="player1" placeholder="Nome do Jogador 1">
+            <span id="player1-wins">Vitórias: 0</span>
+            <button onclick="cadastrarJogador(1)">Cadastrar</button>
+        </div>
+
+        <div id="game-board">
+            <div class="cell C0" onclick="cellClick(this)"></div>
+            <div class="cell C1" onclick="cellClick(this)"></div>
+            <div class="cell C2" onclick="cellClick(this)"></div>
+            <div class="cell C3" onclick="cellClick(this)"></div>
+            <div class="cell C4" onclick="cellClick(this)"></div>
+            <div class="cell C5" onclick="cellClick(this)"></div>
+            <div class="cell C6" onclick="cellClick(this)"></div>
+            <div class="cell C7" onclick="cellClick(this)"></div>
+            <div class="cell C8" onclick="cellClick(this)"></div>
+        </div>
+
+        <div class="side-panel">
+            <label for="player2">Jogador 2:</label>
+            <input type="text" id="player2" placeholder="Nome do Jogador 2">
+            <span id="player2-wins">Vitórias: 0</span>
+            <button onclick="cadastrarJogador(2)">Cadastrar</button>
+        </div>
+    </div>
+
+    <script>
+        let currentPlayer = 'X';
+        let vitoria = false;
+        let JogadorX = 0;
+        let JogadorO = 0;
+        const listaDeTeclas = document.querySelectorAll('.cell');
+        for (let contador = 0; contador < listaDeTeclas.length; contador++) {
+            const tecla = listaDeTeclas[contador];
+            console.log("for "+ listaDeTeclas[contador].innerText)
+
+            //const campo = tecla.classList[1];
+            //  console.log("Lista de teclas")
+            //  console.log(contador);
+            // console.log("Lista de teclas")
+            // console.log(campo.innerText);
+        }
+        function checkWinner(x1, x2, x3) {
+            return false;
+            if (x1 != '') {
+                if (x1.innerText === x2.innerText && x2.innerText === x3.innerText) {
+                    return true;
+                } 
+            }
+        }
+
+        function cellClick(cell) {
+            if (cell.innerText === '' && !checkWinner()) {
+                cell.innerText = currentPlayer;
+                currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // ? -> operador ternário
+            }
+            console.log("O que tem no X1 "+listaDeTeclas[0].innerText)
+            console.log("vitoria do X " + checkWinner(listaDeTeclas[0] === 'X', listaDeTeclas[1] == 'X', listaDeTeclas[2] == 'X'));
+
+        }
+
+
+        /* Fazer a verificação do vencedor.
+           Pode ocorrer vitória do jogador 1 ou 2, bem como empate.
+           Incrementar contador do vencedor
+         */
+        
+
+
+
+
+
+        
+        
+        // checar(listaDeTeclas[0] === 'X', listaDeTeclas[1] == 'X', listaDeTeclas[2] == 'X');           
+
+        // jogadorX = 0;
+        // if (JogadorX === 3) {
+        //     vitoria = true;
+        //     console.log("vitoria Jogador X" + vitoria)
+        // }
+        // return vitoria;
+
+    </script>
+</body>
+
+</html>
