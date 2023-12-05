@@ -1,10 +1,27 @@
 var jogador, vencedor = null;
 var jogadorSelecionado = document.getElementById('jogador-selecionado');
 var vencedorSelecionado = document.getElementById('vencedor-selecionado');
+//Variaveis para controlar placar
+let vitoriasA = 0,
+    vitoriasB = 0;
+let partidas = 0;
+let pessoaA = "Jogador 1",
+    pessoaB = "Jogador 2";
+var jogada;
 
 mudarJogador('X');
 
+function salvarNome() {
+    var nome = document.getElementById("jogador1").value;
+    var nome2 = document.getElementById("jogador2").value;
+    document.getElementById("NomeJogador1").textContent = nome ;
+    document.getElementById("NomeJogador2").textContent = nome2 ;
+    
+    
+}
+
 function escolherQuadrado(id) {
+    salvarNome();
     if (vencedor !== null) {
         return;
     }
@@ -44,52 +61,52 @@ function checaVencedor() {
     var quadrado9 = document.getElementById(9);
 
     if (checaSequencia(quadrado1, quadrado2, quadrado3)) {
-       
+
         mudarCorQuadrado(quadrado1, quadrado2, quadrado3);
-        mudarVencedor(quadrado1);
-        
+        //mudarVencedor(quadrado1);
+
         return;
     }
 
     if (checaSequencia(quadrado4, quadrado5, quadrado6)) {
         mudarCorQuadrado(quadrado4, quadrado5, quadrado6);
-        mudarVencedor(quadrado4);
+        // mudarVencedor(quadrado4);
         return;
     }
 
     if (checaSequencia(quadrado7, quadrado8, quadrado9)) {
         mudarCorQuadrado(quadrado7, quadrado8, quadrado9);
-        mudarVencedor(quadrado7);
+        // mudarVencedor(quadrado7);
         return;
     }
 
     if (checaSequencia(quadrado1, quadrado4, quadrado7)) {
         mudarCorQuadrado(quadrado1, quadrado4, quadrado7);
-        mudarVencedor(quadrado1);
+        //mudarVencedor(quadrado1);
         return;
     }
 
     if (checaSequencia(quadrado2, quadrado5, quadrado8)) {
         mudarCorQuadrado(quadrado2, quadrado5, quadrado8);
-        mudarVencedor(quadrado2);
+        // mudarVencedor(quadrado2);
         return;
     }
 
     if (checaSequencia(quadrado3, quadrado6, quadrado9)) {
         mudarCorQuadrado(quadrado3, quadrado6, quadrado9);
-        mudarVencedor(quadrado3);
+        //mudarVencedor(quadrado3);
         return;
     }
 
     if (checaSequencia(quadrado1, quadrado5, quadrado9)) {
         mudarCorQuadrado(quadrado1, quadrado5, quadrado9);
-        mudarVencedor(quadrado1);
+        //mudarVencedor(quadrado3);
         return;
     }
 
     if (checaSequencia(quadrado3, quadrado5, quadrado7)) {
         mudarCorQuadrado(quadrado3, quadrado5, quadrado7);
-        mudarVencedor(quadrado3);
+        // mudarVencedor(quadrado3);
     }
 }
 
