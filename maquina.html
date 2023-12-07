@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #ccc;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Jogo da Velha</h1>
+
+<table id="tabuleiro">
+  <tr>
+    <td onclick="jogar(0, 0)"></td>
+    <td onclick="jogar(0, 1)"></td>
+    <td onclick="jogar(0, 2)"></td>
+  </tr>
+  <tr>
+    <td onclick="jogar(1, 0)"></td>
+    <td onclick="jogar(1, 1)"></td>
+    <td onclick="jogar(1, 2)"></td>
+  </tr>
+  <tr>
+    <td onclick="jogar(2, 0)"></td>
+    <td onclick="jogar(2, 1)"></td>
+    <td onclick="jogar(2, 2)"></td>
+  </tr>
+</table>
+
+<script>
+let tabuleiro = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
+let jogadorAtual = 'X';
+let fimDeJogo = false;
+
+function jogar(linha, coluna) {
+  if (fimDeJogo || tabuleiro[linha][coluna] !== '') {
+    return;
+  }
+
+  tabuleiro[linha][coluna] = jogadorAtual;
+  atualizarTabuleiro();
+
+  if (verificarVitoria(jogadorAtual)) {
+    alert(`Jogador ${jogadorAtual} venceu!`);
+    fimDeJogo = true;
+    return;
+  } else if (verificarEmpate()) {
+    alert('O jogo terminou em empate!');
+    fimDeJogo = true;
+    return;
+  }
+
+  // Alternar jogador
+  jogadorAtual = (jogadorAtual === 'X') ? 'O' : 'X';
+
+  // Simular jogada da máquina após o jogador
+  jogadaMaquina();
+}
+
+function jogadaMaquina() {
+  if (fimDeJogo) {
+    return;
+  }
+
+  // Lógica simples da máquina: escolhe a primeira célula vazia
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (tabuleiro[i][j] === '') {
+        tabuleiro[i][j] = 'O';
+        atualizarTabuleiro();
+
+        if (verificarVitoria('O')) {
+          alert('A máquina venceu!');
+          fimDeJogo = true;
+        } else if (verificarEmpate()) {
+          alert('O jogo terminou em empate!');
+          fimDeJogo = true;
+        }
+
+        return;
+      }
+    }
+  }
+}
+
+function verificarVitoria(jogador) {
+  // Verificar linhas e colunas
+  for (let i = 0; i < 3; i++) {
+    if ((tabuleiro[i][0] === jogador && tabuleiro[i][1] === jogador && tabuleiro[i][2] === jogador) ||
+        (tabuleiro[0][i] === jogador && tabuleiro[1][i] === jogador && tabuleiro[2][i] === jogador)) {
+      return true;
+    }
+  }
+
+  // Verificar diagonais
+  if ((tabuleiro[0][0] === jogador && tabuleiro[1][1] === jogador && tabuleiro[2][2] === jogador) ||
+      (tabuleiro[0][2] === jogador && tabuleiro[1][1] === jogador && tabuleiro[2][0] === jogador)) {
+    return true;
+  }
+
+  return false;
+}
+
+function verificarEmpate() {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (tabuleiro[i][j] === '') {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+function atualizarTabuleiro() {
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      document.getElementById('tabuleiro').rows[i].cells[j].innerHTML = tabuleiro[i][j];
+    }
+  }
+}
+</script>
+
+</body>
+</html>

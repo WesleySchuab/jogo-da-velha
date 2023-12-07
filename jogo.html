@@ -18,12 +18,28 @@
         <div class="cabecalho">
             <h1 class="titulo">Jogo Da Velha W#esley</h1>
         </div>
+        <div class="pagina">
+            <div class="cabecalho">
+              
+                <label id="vencedor-selecionado">
+                </label>
+                <div>
+                    <button class="computador" onclick="versusMaquina()">
+                        Computador
+                    </button>
+                </div>
+                <div>
+                    <button class="reiniciar" onclick="reiniciar()">
+                        Reiniciar
+                    </button>
+                </div>
+            </div>
 
 
         <div class="corpo">
             <div class="dados">
                 <div class="input">
-                    <p id="NomeJogador1">jogador 1</p>
+                    <p class="Nomes" id="NomeJogador1">jogador 1</p>
                     <input class="nome" type="text" id="jogador1" name="pessoaA" value="Jogador 1">
                 </div>
                 <div class="estatisticas" id="vitoriasA">
@@ -45,7 +61,7 @@
             </div>
             <div class="dados">
                 <div class="input">
-                    <p id="NomeJogador2">jogador 2</p>
+                    <p class="Nomes"id="NomeJogador2">jogador 2</p>
                     <input class="nome" type="text" id="jogador2" name="pessoaA" value="Jogador 1">
                 </div>
                 <div class="estatisticas" id="vitoriasB">
@@ -56,13 +72,14 @@
                 <!-- <label class="ganhador">
                     Vencedor:
                 </label> -->
-                <label id="vencedor-selecionado">
-                </label>
                 <div>
-                    <button onclick="reiniciar()">
-                        Reiniciar
+                    <button class="salvarNome" onclick="salvarNome()">
+                        Salvar
                     </button>
                 </div>
+                <label id="vencedor-selecionado">
+                </label>
+               
     
             </div>
         </div>
