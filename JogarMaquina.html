@@ -1,0 +1,102 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Jogo da Nova</title>
+</head>
+
+<body>
+    <!-- Separar titulo da pagina -->
+    <div class="pagina">
+        <div class="cabecalho">
+            <h1 class="titulo">Jogo Da Velha W#esley</h1>
+        </div>
+        <div class="pagina">
+            <div class="cabecalho">
+<!--               
+                <label id="vencedor-selecionado">
+                </label> -->
+                <!-- <div>
+                    <button class="computador" onclick="versusMaquina()">
+                        Computador
+                    </button>
+                </div> -->
+                <div>
+                    <button class="reiniciar" onclick="reiniciar()">
+                        Reiniciar
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="corpo">
+                <div class="dados">
+                    <div class="input">
+                        <p id="NomeJogador1">jogador 1</p>
+                        <input class="nome" type="text" id="jogador1" name="pessoaA" value="Jogador 1">
+                    </div>
+                    <div class="estatisticas" id="jogadorA">
+                        Vitórias: 0
+                    </div>
+                </div>
+                <div class="jogo">
+
+                <div id="1" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="2" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="3" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="4" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="5" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="6" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="7" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="8" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+                <div id="9" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
+
+            </div>
+            <div class="dados">
+                <div class="input">
+                    <p class="Nomes"id="NomeJogador2">Chatgpt</p>
+                    <!-- <input class="nome" type="text" id="jogador2" name="pessoaA" value="Jogador 1"> -->
+                </div>
+                <div class="estatisticas" id="jogadorB">
+                    Vitórias: 0
+                </div>
+            </div>
+            <div class="vencedor">
+                <!-- <label class="ganhador">
+                    Vencedor:
+                </label> -->
+                <div>
+                    <button class="salvarNome" onclick="salvarNome()">
+                        Salvar
+                    </button>
+                </div>
+                <label id="vencedor-selecionado">
+                </label>
+               
+    
+            </div>
+        </div>
+        <div class="jogador">
+            <label>
+                Jogador:
+            </label>
+            <label id="jogador-selecionado">
+
+            </label>
+        </div>
+       
+
+    </div>
+
+    <script src="Ia.js"></script>
+
+</body>
+
+</html>
