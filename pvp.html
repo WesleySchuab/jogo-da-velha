@@ -18,31 +18,13 @@
         <div class="cabecalho">
             <h1 class="titulo">Jogo Da Velha W#esley</h1>
         </div>
-        <div class="pagina">
-            <div class="cabecalho">
-              
-                <label id="vencedor-selecionado">
-                </label>
-                <div>
-                    <button class="computador" onclick="versusMaquina()">
-                        Computador
-                    </button>
-                </div>
-                <div>
-                    <button class="reiniciar" onclick="reiniciar()">
-                        Reiniciar
-                    </button>
-                </div>
-            </div>
-
-
         <div class="corpo">
             <div class="dados">
                 <div class="input">
-                    <p class="Nomes" id="NomeJogador1">jogador 1</p>
+                    <p id="NomeJogador1">jogador 1</p>
                     <input class="nome" type="text" id="jogador1" name="pessoaA" value="Jogador 1">
                 </div>
-                <div class="estatisticas" id="vitoriasA">
+                <div class="estatisticas" id="jogadorA">
                     Vitórias: 0
                 </div>
             </div>
@@ -64,7 +46,7 @@
                     <p class="Nomes"id="NomeJogador2">jogador 2</p>
                     <input class="nome" type="text" id="jogador2" name="pessoaA" value="Jogador 1">
                 </div>
-                <div class="estatisticas" id="vitoriasB">
+                <div class="estatisticas" id="jogadorB">
                     Vitórias: 0
                 </div>
             </div>
@@ -75,6 +57,11 @@
                 <div>
                     <button class="salvarNome" onclick="salvarNome()">
                         Salvar
+                    </button>
+                </div>
+                <div>
+                    <button onclick="reiniciar()">
+                        Reiniciar
                     </button>
                 </div>
                 <label id="vencedor-selecionado">
@@ -88,7 +75,6 @@
                 Jogador:
             </label>
             <label id="jogador-selecionado">
-
             </label>
         </div>
        
