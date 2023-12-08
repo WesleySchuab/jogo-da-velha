@@ -18,63 +18,34 @@
         <div class="cabecalho">
             <h1 class="titulo">Jogo Da Velha W#esley</h1>
         </div>
+        <div class="pagina">
+            <div class="cabecalho">
+              
+                
+            </div>
 
 
         <div class="corpo">
-            <div class="dados">
-                <div class="input">
-                    <p id="NomeJogador1">jogador 1</p>
-                    <input class="nome" type="text" id="jogador1" name="pessoaA" value="Jogador 1">
-                </div>
-                <div class="estatisticas" id="jogadorA">
-                    Vitórias: 0
-                </div>
-            </div>
-            <div class="jogo">
+           
+            <div class="menu">
 
-                <div id="1" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="2" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="3" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="4" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="5" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="6" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="7" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="8" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-                <div id="9" class="quadrado" onclick="escolherQuadrado(this.id)">-</div>
-
-            </div>
-            <div class="dados">
-                <div class="input">
-                    <p id="NomeJogador2">jogador 2</p>
-                    <input class="nome" type="text" id="jogador2" name="pessoaA" value="Jogador 1">
-                </div>
-                <div class="estatisticas" id="jogadorB">
-                    Vitórias: 0
-                </div>
-            </div>
-            <div class="vencedor">
-                <!-- <label class="ganhador">
-                    Vencedor:
-                </label> -->
-                <label id="vencedor-selecionado">
-                </label>
                 <div>
-                    <button onclick="reiniciar()">
-                        Reiniciar
+                    <a href="jogoMaquina.html">
+                    <button class="computador" onclick="versusMaquina()">
+                        Vs Computador
+                    </button>
+                </a>
+                </div>
+                <div>
+                    <a href="pvp.html"></a>
+                    <button class="reiniciar" onclick="reiniciar()">
+                        Player vs Player
                     </button>
                 </div>
-    
-            </div>
-        </div>
-        <div class="jogador">
-            <label>
-                Jogador:
-            </label>
-            <label id="jogador-selecionado">
 
-            </label>
-        </div>
-       
+            </div>
+           
+        </div>       
 
     </div>
 
