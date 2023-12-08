@@ -26,6 +26,28 @@ function salvarNome() {
 
 
 }
+function empate(){
+    console.log("entrou na função empate");
+    let empate = 0 ;
+    var quadradosVazios = [];
+    for (let contador = 0; contador < 9; contador++) {
+        if (quadrados[contador].innerHTML === '-') {
+            empate++;
+        }
+    }
+    console.log("valor da var emapte: "+empate);
+    if(empate==0){
+        alert("emapte");
+        
+        var quadrado1 = document.getElementById(1);
+        quadrados[0].style.background = '#0f0';
+        quadrados[7].style.background = '#0f0';
+        quadrados[2].style.background = '#0f0';
+       // mudarCorQuadrado(quadrado1, quadrado8, quadrado3);
+        return true;
+    }else
+    return false;
+}
 
 function escolherQuadrado(id) {
     // Verifica se o jogo já terminou 
@@ -55,6 +77,7 @@ function escolherQuadrado(id) {
     
     checaVencedor();
     JogadaDaMaquina(jogador);
+    empate();
 }
 
 function JogadaDaMaquina(jogador) {
@@ -95,6 +118,7 @@ function JogadaDaMaquina(jogador) {
         // Atualiza a interface
         //mudarJogador(jogador);
         checaVencedor();
+        empate();
     }
 }
 
