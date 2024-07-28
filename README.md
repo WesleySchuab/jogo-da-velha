@@ -14,6 +14,8 @@ Devido ao curto prazo de tempo e ao fato de termos tido contato com a linguagem 
 
 ![Screenshot do Jogo da Velha] ![Screenshot from 2024-07-28 13-28-53](https://github.com/user-attachments/assets/0b1ba65f-2bb1-44df-b5fe-695c8732dded)
 
+![pxp](https://github.com/user-attachments/assets/b3dc8a70-8b52-49d0-8a67-821a03a11adc)
+
 
 ## Demonstração do Projeto
 
