@@ -12,7 +12,8 @@ Os requisitos do projeto estão no PDF abaixo:
 
 Devido ao curto prazo de tempo e ao fato de termos tido contato com a linguagem JavaScript há apenas uma semana, o código precisa de muitas melhorias. Decidi publicar o projeto pelo design elegante que acredito ter construído e pela sua usabilidade, que está funcionando corretamente em grande parte.
 
-![Screenshot do Jogo da Velha](https://github.com/user-attachments/assets/9f68d9da-46b7-4bdd-927e-328e07d4b498)
+![Screenshot do Jogo da Velha] ![Screenshot from 2024-07-28 13-28-53](https://github.com/user-attachments/assets/0b1ba65f-2bb1-44df-b5fe-695c8732dded)
+
 
 ## Demonstração do Projeto
 
