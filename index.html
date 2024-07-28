@@ -1,54 +1,38 @@
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
     <title>Jogo da Nova</title>
 </head>
-
 <body>
-    <!-- Separar titulo da pagina -->
     <div class="pagina">
         <div class="cabecalho">
             <h1 class="titulo">Jogo Da Velha W#esley</h1>
         </div>
         <div class="pagina">
             <div class="cabecalho">
-              
-                
             </div>
-
-
-        <div class="corpo">
-           
-            <div class="menu">
-
-                <div>
-                    <a href="JogarMaquina.html">
-                    <button class="computador" onclick="versusMaquina()">
-                        Vs Computador
-                    </button>
-                </a>
+            <div class="corpo">
+                <div class="menu">
+                    <div class="pc">
+                        <a href="JogarMaquina.html">
+                            <button class="computador" onclick="versusMaquina()">Vs Computador</button>
+                        </a>
+                    </div>
+                    <div class="machine">
+                        <a href="pvp.html">
+                            <button class="reiniciar" onclick="reiniciar()">Player vs Player</button>
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <a href="pvp.html">
-                    <button class="reiniciar" onclick="reiniciar()">
-                        Player vs Player
-                    </button>
-                </a>
-                </div>
-
-            </div>
-           
-        </div>       
-
+            </div>       
+        </div>
     </div>
 </body>
-
 </html>
