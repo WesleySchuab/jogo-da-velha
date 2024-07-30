@@ -1,4 +1,24 @@
 # Jogo da Velha
+O jogo da velha é um clássico duelo estratégico para dois jogadores, X e O, que se revezam marcando um tabuleiro 3x3. O objetivo é simples: o primeiro a alinhar três de suas peças em uma linha reta (horizontal, vertical ou diagonal) vence!
+
+Neste projeto, levamos o jogo da velha a um novo nível, oferecendo:
+
+Personalização: Os jogadores podem escolher seus nomes, tornando a experiência mais divertida e individualizada.
+Contagem de pontos: Um sistema completo acompanha as vitórias de cada jogador, permitindo acompanhar o desempenho ao longo de diversas partidas.
+Modos de jogo:
+Dois jogadores: Divirta-se desafiando um amigo no mesmo dispositivo!
+Jogador vs Computador: Enfrente um adversário virtual e teste suas habilidades.
+Experiência imersiva: Animações e design intuitivo tornam cada partida mais emocionante e envolvente.
+Reinício rápido: A qualquer momento, você pode reiniciar o jogo e começar uma nova partida.
+Funcionalidades técnicas:
+
+Controle de jogadores: Implementação de um sistema para identificar e exibir os nomes dos jogadores.
+Sistema de pontuação: Desenvolvimento de um mecanismo para contabilizar as vitórias e manter um histórico das partidas.
+Lógica do jogo: Implementação das regras do jogo da velha, incluindo verificação de vitória e detecção de empates.
+Interface gráfica: Criação de uma interface intuitiva e visualmente agradável, utilizando animações e efeitos visuais.
+Nosso objetivo é proporcionar uma experiência de jogo completa e divertida, tanto para jogadores casuais quanto para aqueles que buscam um desafio intelectual.
+
+![Screenshot do Jogo da Velha] ![Screenshot from 2024-07-28 13-28-53](https://github.com/user-attachments/assets/0b1ba65f-2bb1-44df-b5fe-695c8732dded)
 
 Este projeto é um trabalho escolar do curso **TECNOLOGIA EM ANÁLISE E DESENVOLVIMENTO DE SISTEMAS** no Instituto Federal de Educação e Tecnologia do Estado de São Paulo.
 
@@ -11,8 +31,6 @@ Os requisitos do projeto estão no PDF abaixo:
 ## Descrição
 
 Devido ao curto prazo de tempo e ao fato de termos tido contato com a linguagem JavaScript há apenas uma semana, o código precisa de muitas melhorias. Decidi publicar o projeto pelo design elegante que acredito ter construído e pela sua usabilidade, que está funcionando corretamente em grande parte.
-
-![Screenshot do Jogo da Velha] ![Screenshot from 2024-07-28 13-28-53](https://github.com/user-attachments/assets/0b1ba65f-2bb1-44df-b5fe-695c8732dded)
 
 ![pxp](https://github.com/user-attachments/assets/b3dc8a70-8b52-49d0-8a67-821a03a11adc)
 
